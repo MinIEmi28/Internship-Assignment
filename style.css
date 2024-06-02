@@ -1,0 +1,344 @@
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.white{
+    background-color: white;
+}
+.grey{
+    background-color: rgb(249, 249, 249);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.award-winning .card{
+    box-shadow: none;
+}
+p{
+    font-size: 0.8em; 
+}
+.sec-heading{
+    color: red;
+    font-size: 1em;
+}
+.img-container{
+    object-fit: contain;
+}
+.img{
+    width: 100%;
+    overflow: hidden;
+}
+
+/* slider */
+.what-we-do{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 70%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card-slider {
+    min-width: 200px;  
+    height: 200px;  
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card-slider img {
+    width: 100%;
+    display: block;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+.dots {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    margin: 0 10px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 3px;
+}
+
+.dot.active {
+    height: 12px;
+    width: 12px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: white;
+    border-color: red;
+}
+
+.why-choose-us{
+    align-content: center;
+}
+.why-choose-us .sec-heading, .why-choose-us h3{
+    display: flex;
+    justify-content: center;
+}
+.why-choose-us .icon{
+    margin: 8px;
+}
+.why-choose-us i{
+    width: 100%;
+}
+.why-choose-us .card{
+    margin: 0;
+}
+.why-choose-us .card-body{
+    padding : 8px;
+}
+.experts-growth .sec-heading, .experts-growth h3{
+    display: flex;
+    justify-content: center;
+}
+.experts-growth .card{
+    background-color: #fafafa;
+}
+.experts-growth .card:hover{
+    box-shadow: 5px 5px 10px #9d9c9ce8;
+    background-color: white;
+}
+.our-company-growth{
+    flex-direction: row;
+}
+.our-company-growth .flex-2{
+    flex-direction: row;
+}
+
+.stats{
+    font-size: 3vw;
+}
+.footer-img{
+    width: 98vw;
+    object-fit: contain;
+}
+.footer-img img{
+    width: 100%;
+}
+/* chngeable */
+.why-choose-us .changeable{
+    box-shadow: none;
+}
+.changeable {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: 380px;
+    /* height: auto; */
+    /* max-height: 400px; */
+}
+
+.details-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.detail {
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    cursor: pointer;
+}
+
+.detail.selected {
+    color: white;
+    background-color: red;
+}
+/* form */
+
+.award-winning .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.form-popup {
+    width: 500px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-floating label {
+    pointer-events: none;
+    transform-origin: left top;
+    transition: transform 0.2s ease-out, color 0.2s ease-out;
+}
+
+.form-floating input:not(:placeholder-shown) + label {
+    transform: scale(0.85) translateY(-1.5em) translateX(0.15em);
+    color: #6c757d;
+}
+
+/* Basic styling for the card and overlay */
+.card-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-slider img {
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.card-slider .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.7); /* Red hue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    backdrop-filter: blur(5px);
+}
+
+.card-slider:hover img {
+    transform: scale(1.1);
+}
+
+.card-slider:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    text-align: center;
+    color: white;
+}
+
+.overlay-content i {
+    margin-bottom: 15px;
+}
+
+.overlay-content h5 {
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    margin-bottom: 20px;
+}
+
+@media(max-width :1350px){
+    .why-choose-us .why-we-are-best{
+        flex-wrap: wrap;
+    }
+    /* .changeable .d-flex{
+
+        flex-direction: row;
+    } */
+   .details-section{
+    max-width: 400px;
+   }
+}
+@media (max-width:1200px){
+    .changeable .d-flex{
+        display: flex;
+        flex-direction: column;
+       }
+       .our-company-growth{
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
+        .changeable .detail{
+            width: 98.5%;
+            margin-top: 10px;
+        }
+        .changeable .image-section{
+            width: 100%;
+        }
+        .changeable .image-section img{
+            width: 100%;
+        } 
+        .details-section{
+            max-width: 100%;
+        }
+}
+@media (max-width:992px){
+    .changeable{
+        display: flex;
+        flex-direction: row;
+    }
+    .our-company-growth{
+        flex-wrap: wrap ;
+        justify-content: center;
+    }
+}
+@media (max-width : 670px){
+    .why-choose-us .why-we-are-best .flex-1{
+        flex-wrap: wrap;
+    }
+    .our-company-growth .flex-2{
+        flex-wrap: wrap;
+    }
+    .our-company-growth .card{
+        width: 100%;
+    }
+}
